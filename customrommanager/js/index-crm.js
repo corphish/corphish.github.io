@@ -1,4 +1,4 @@
-$.getJSON("https://raw.githubusercontent.com/corphish/corphish.github.io/master/assets/json/map-crm.json", function(data){
+$.getJSON("https://bitbucket.org/corphish/crm_store/raw/master/map.json", function(data){
     makeTable(data);
 });
 
