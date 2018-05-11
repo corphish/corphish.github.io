@@ -1,0 +1,93 @@
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Custom ROM Manager</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://code.getmdl.io/1.3.0/material.indigo-pink.min.css" />
+        <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+        <link rel="stylesheet" href="styles/style-crm.css" />
+    </head>
+    <body>
+        <div class="mdl-grid">
+            <div class="mdl-cell mdl-cell--6-col mdl-cell--8-col-tablet banner">
+                <img src="assets/images/icon-crm.png" height="256" width="256">
+                <div class="banner-content">
+                    <h1 class="banner-content-title">Custom ROM Manager</h1>
+                    <p>Custom ROM Manager finds all the ROMs, GApps and other zip files that are downloaded on your device, lets you install or manage them easily. It also helps you discover and visit official sites of some ROMs/GApps from where you can download them or see changelogs. Visit the <a href="https://play.google.com/store/apps/details?id=com.corphish.customrommanager.free">Play Store link</a> to know more.</p>
+                </div>
+                <div class="section">
+                    <h3>Requirements</h3>
+                    <h6><strong>Compatibility Requirements</strong></h6>
+                    Following Android and platform versions are needed for Custom ROM Manager to be compatible with your device -
+                    <ul>
+                        <li><strong>Android version</strong> - Android 4.4 (Kitkat) and above.</li>
+                        <li><strong>Platforms supported</strong> - arm, arm64, x86, x86_64. (Don't worry that's nearly all of the devices that run Android now)</li>
+                    </ul>
+                    <h6><strong>Permission Requirements</strong></h6>
+                    <ul>
+                        <li><strong>Storage permissions</strong> - Storage permissions are needed for finding files on your device, deleting them etc. Users need to explicitly allow permissions if they are using Android 6.0 or later versions. Every file <em>write</em> operations (for example - file deletion, bootimage extraction) are done with user's consent.</li>
+                    </ul>
+                    <h6><strong>Other Requirements</strong></h6>
+                    <ul>
+                        <li><strong>Prior knowledge of flashing custom ROMs</strong> - Although Custom ROM Manager can help beginners discovering cutom ROMs if their devices are officially supported, it is recommended that users have prior knowledge about flashing custom ROMs, so that they are able to understand what this app does, and are able to recover if something goes wrong (Custom ROM Manager is able to accurately write proper openrecovery scripts off users' selections, so in 99% cases, it would be users' mistake if something goes wrong, like they chose wrong zip file to flash).</li>
+                        <li><strong>Root Access</strong> - Although root access requirement is not enforced in the app, it is <em>highly recommended</em> that user grants root access to the app if their device is rooted. Infact this app should be used only on a rooted device, so that it works as it should. Root access is needed to do following stuff -</li>
+                        <ul>
+                            <li><strong>Write openrecovery scripts</strong> - This is the script that TWRP recovery parses and executes. Custom ROM Manager writes this script to perform zip installation/backup/restore depending upon user selection. Since openrecoveryscript neeeds to be in /cache/recovery/, hence root access is needed to write it.</li>
+                            <li><strong>Delete files in external sd card (memory cards)</strong> - Android framework does not permit file operations on this storage location using conventional ways. It does provide a way though (which requires users to select the sdcard in documents file manager app), but that is not used since this can be done with root without the need of users going through an extra step, and root access being a 'highly recommended' if not a 'mandatory' requirement.</li>
+                            <li><strong>Rebooting to recovery</strong> - Root access is needed to reboot into recovery.</li>
+                        </ul>
+                        <li><strong>TWRP recovery</strong> - TWRP recovery is needed for flashing the zip files/backup/restore by the app. Only TWRP recovery is supported, because - </li>
+                        <ul>
+                            <li>A custom recovery is among the first things one must install to start flashing custom ROMs. TWRP is a great choice, and almost all devices having custom ROMs, have TWRP.</li>
+                            <li>TWRP has been under development and available since a long time.</li>
+                            <li>Great (official) support is available for variety of devices.</li>
+                        </ul>
+                    </ul>
+                </div>
+                <div class="section">
+                    <h3>App usage</h3>
+                    <h6><strong>How to browse popular ROMs/GApps?</strong></h6>
+                    Right after you open the app, you are presented with the popular ROMs. If you want to check out other sections, you can do so by selecting the appropriate sction in navigation menu. Once in appropriate section, you can tap an entry of your liking, which well then bring you to that ROM/GApp specific section you tapped. In this section, you have <em>Official Links</em>, which contains various links to their official sites, <em>Downloaded Builds</em> which contains the downloaded builds of that ROM/GApp on your device, and <em>Actions</em> (pro version) which shows any possible actions.
+                    Additionally, if you are looking for a particular ROM/GApp, and the app happens to have that in its popular listing, you can directly search for it in the search bar.
+                    <h6><strong>How are popular ROMs/GApps selected and shown in the app?</strong></h6>
+                    The items in the popular section are chosen based on various research, performed by browsing forums for most active/popular devices in prominent sites like <a href="https://xda-developers.com">XDA Developers</a>, and then a list is prepared based on the same, and presented <em>alphabetically</em> in the app. Custom ROM Manager <em>does not</em> associate any sort of rating, or stuff like "This is the best ROM" or anything like that. It understands that every ROM is unique in some way or the other, and values the efforts put in by the people behind the ROM. However, only those which are under active development are selected. And since the list needs to be kept limited, only handful number of ROMs are selected. Other ROMs are identified internally (which can be accessed in 'Other ROMs' section). As far as GApps are concerned, there are very little choices in this regard.
+                    <h6><strong>How do I select a zip file for installation?</strong></h6>
+                    To select a zip file for flashing, perform the following steps - 
+                    <ul>
+                        <li>Find the zip file that you want to flash. This can be done by - </li>
+                        <ul>
+                            <li>Browsing the appropriate popular section, then finding the specific ROM/GApp entry, and then finding the file in 'Downloaded Builds' section.</li>
+                            <li>Searching for the file by its name from the search bar.</li>
+                        </ul>
+                        <li>Choose the zip file for installation - </li>
+                        <ul>
+                            <li>Tap the card which shows the file you want to flash. Or if you used the search bar, tap the appropriate search result.</li>
+                            <li>You will be now in the "Zip Information" screen, which shows various info about that zip file.</li>
+                            <li>Tap the <i class="material-icons">touch_app</i> icon at the top right. This shows various actions available for the file.</li>
+                            <li>Tap "Select for installation".</li>
+                            <li>Choose the partitions you want to wipe before the zip is installed.</li>
+                            <li>Tap OK to confirm selection.</li>
+                        </ul>
+                        You now have selected a zip file for installation. You can do the same for as many number of zip files you want to install. Additionally, if you found the zip file that you want to flash by browsing the appropriate section and then in 'Downloaded Builds' of that ROM, you can select it for installation in a faster way too, by -
+                        <ul>
+                            <li>Long pressing the card which shows the file you want to flash, will open the "Zip selection for installation dialog". This is the same dialog you would see when you had selected that zip using above mentioned steps. This dialog lets you choose the partitions you want to wipe before that zip is installed.</li>
+                            <li>Swiping that card from left to right selects the zip file for instalation. It also chooses the appropriate partitions to be wiped before the zip is installed, depending on the zip type. For pro version, if 'Left-handed mode' is enabled, the card needs to be swiped from right to left (suitable for left hand usage). Additionally, in pro version, the partitions that are selected to be wiped before the zip is installed, can be configured.</li>
+                        </ul>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <footer class="mdl-mini-footer">
+            <div class="mdl-mini-footer__left-section">
+                <ul class="mdl-mini-footer__link-list">
+                <li><a href="#">Help</a></li>
+                <li><a href="#">Legal</a></li>
+                </ul>
+            </div>
+        </footer>
+        <script defer src="https://code.getmdl.io/1.3.0/material.min.js"></script>
+    </body>
+</html>
