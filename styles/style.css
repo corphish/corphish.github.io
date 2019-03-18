@@ -1,0 +1,28 @@
+body {
+    background: #eaeaea;
+    font-family: 'Open Sans', sans-serif;
+}
+
+.banner {
+    margin: 64px 16%;
+    padding: 2px;
+    width: 68%;
+}
+
+.banner-content {
+    display: inline-block;
+    margin-left: 24px;
+}
+
+.banner-content-title {
+    margin-bottom: 24px;
+}
+
+.section {
+    margin-top: 48px;
+    margin-left: 24px;
+}
+
+h1, h2, h3 {
+    font-weight: 300;
+}
